@@ -6,10 +6,6 @@ categories: tests
 mathjax: true
 --- 
 
-This is a excerpt.
-
-<!--more-->
-
 {% include mathjax.html %}
 
 ## Big header
