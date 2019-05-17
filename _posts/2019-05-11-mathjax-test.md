@@ -6,6 +6,8 @@ date: 2019-05-11 10:00:00
 
 {% include mathjax.html %}
 
+Testing MathJax features and excerpts in GitHub pages.
+
 ## Central limit theorem 
 
 {::nomarkdown}
@@ -23,3 +25,4 @@ The _Lindeberg condition_ states:
 $$\begin{equation}\text{for all } \varepsilon>0,\ L_{n}(\varepsilon)\rightarrow0 \text{ as }n\rightarrow\infty.\label{LindCond}\end{equation}$$
 If $\mathbb{E}|X_{1}|^{3}<\infty$ and $s_{n}^{-3}\sum_{i=1}^{n}\mathbb{E}|X_{i}^{3}|\rightarrow 0$ as $n\rightarrow\infty$ then Lindeberg's condition holds.  This condition under which the Lindeberg's condition holds is known as Liapounov's condition.
 {:/nomarkdown}
+

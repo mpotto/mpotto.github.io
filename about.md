@@ -4,7 +4,4 @@ title: About
 permalink: /about/
 ---
 
-I'm Mateus and this is my personal blog. 
-
-
-
+Hi, I'm a computational physics undergraduate student at Instituto de Física de São Carlos working on Computational Biology. 
