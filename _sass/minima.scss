@@ -43,6 +43,13 @@ $on-laptop:        800px !default;
   font-size: $base-font-size * $ratio;
 }
 
+@font-face {
+    font-family: Rubik;
+    src: url("Rubik-Regular.ttf") format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
 // Import partials.
 @import
   "minima/base",
