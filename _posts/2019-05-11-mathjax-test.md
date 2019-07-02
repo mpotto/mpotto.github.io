@@ -6,10 +6,7 @@ date: 2019-05-11 10:00:00
 
 {% include mathjax.html %}
 
-Testing MathJax features and excerpts in GitHub pages.
-
-## Central limit theorem 
-
+### Central limit theorem
 
 Let $X_{1}, X_{2},\ldots$ be independent random variables with characteristic functions $\phi_{1},\phi_{2},\ldots$ and distribution functions $F_{1},F_{2},\ldots$ and let $\mathbb{E} X_{i}=0$ and $\mathbb{E} X_{i}^{2}=\sigma_{i}^{2}<\infty$, $i=1,2,\ldots$.
 
