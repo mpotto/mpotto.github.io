@@ -1,8 +1,12 @@
 ---
 layout: page
-title: About
+title: About 
 permalink: /about/
 ---
+
+Computational physics undergraduate student working on high energy
+astrophysics.
+
 
 ### Media
 
