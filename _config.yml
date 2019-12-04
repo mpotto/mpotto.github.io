@@ -28,8 +28,10 @@ excerpt_separator: <!--more-->
 markdown: kramdown
 highlighter: pygments
 theme: minima
+#plugins:
+# - jekyll-feed
+
 plugins:
-  - jekyll-feed
   - jekyll-jupyter-notebook
 
 # Exclude from processing.
