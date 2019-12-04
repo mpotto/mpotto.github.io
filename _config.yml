@@ -26,13 +26,12 @@ excerpt_separator: <!--more-->
 
 # Build settings
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 theme: minima
-#plugins:
-# - jekyll-feed
-
 plugins:
-  - jekyll-jupyter-notebook
+ - jekyll-feed
+
+
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
