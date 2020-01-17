@@ -1,0 +1,6 @@
+# jemdoc: menu{MENU}{notebooks.html}
+==Jupyter Notebooks
+
+=== Example Notebooks
+. [example-notebook.html Example Notebook]
+

@@ -1,7 +1,7 @@
 Homepage
-	Home		[index.html]
-	Research	[research.html]
-	MathJax Example [mathjax.html]
+	Home			[index.html]
+	MathJax Example 	[mathjax.html]
+	Jupyter Notebooks 	[notebooks.html]
 
 Useful links
 	Jemdoc+MathJax 		[https://github.com/wsshin/jemdoc_mathjax]

@@ -1,25 +1,12 @@
-# jemdoc: menu{MENU}{index.html}, nofooter  
+# jemdoc: menu{MENU}{index.html}
 ==Mateus Otto
 
 ~~~
-{}{img_left}{img/bio.jpeg}{alt text}{131}{160}{}
+{}{img_left}{img/me.jpeg}{}{180}{180}{}
 Undergraduate Student, \n
 Computational Physics, \n
 [https://ifsc.usp.br Instituto de Física de São Carlos], \n
-E-post: /mateus.potto/ \[@\] /usp/ \[DOT\] /br/
+Email: /mateus.potto/ \[@\] /usp/ \[DOT\] /br/
 ~~~
 
-== About me
-
-== Research
-
-My research topics are:
-	- Astrophysics
-	- Machine Learning
-	- Statistical Inference
-
-[research.html Find out more].
-
-=== Recent Publications 
-. First publication. 
 
