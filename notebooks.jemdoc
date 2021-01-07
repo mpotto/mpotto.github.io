@@ -2,5 +2,5 @@
 ==Jupyter Notebooks
 
 === Notebooks
-#. [example-notebook.html Example Notebook]
+. [notebooks/example-notebook.html Example Notebook]
 . [notebooks/emcee/emcee.html +emcee+ Tutorial]
