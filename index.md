@@ -15,6 +15,8 @@
 
 ## Publications
 
+{% bibliography %}
+
 ## Preprints
 
 ## Software
