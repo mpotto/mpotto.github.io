@@ -1,13 +1,11 @@
 # Mateus P. Otto
 
-
 <p align="justify">
 <img height="220" style="float: right;margin-left: 20px" src="./assets/images/harold.jpg">
-I am a MSc student at the joint graduate program in Statistics of University of São Paulo and Federal University of São Carlos. Recently, I have worked with scalable and interpretable kernel methods, with extensions to neural networks interpretability. My research interests lie in the intersection of machine learning, statistics, optimization and algorithms. 
+I am a MSc student at the joint graduate program in Statistics of University of São Paulo and Federal University of São Carlos. Recently, I have worked with scalable and interpretable kernel methods, and its extensions to neural networks interpretability. My research interests lie in the intersection of machine learning, statistics, optimization and algorithms. 
 <br>
 </p>
-I am applying for PhD positions abroad. <!-- Here is my [CV](/assets/pdf/CV.pdf) -->
-
+I am applying for PhD positions abroad. Here is my [CV](/assets/pdf/CV.pdf).
 <br>
 <br>
 
