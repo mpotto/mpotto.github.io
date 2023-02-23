@@ -8,6 +8,7 @@ I am a MSc student at the joint graduate program in Statistics of University of 
 I am applying for PhD positions abroad. Here is my [CV](/assets/pdf/CV.pdf).
 <br>
 <br>
+<br>
 
 ## Publications
 
