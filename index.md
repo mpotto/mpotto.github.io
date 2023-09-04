@@ -2,7 +2,7 @@
 
 <p align="justify">
 <img height="220" style="float: right;margin-left: 20px" src="./assets/images/me.JPG">
-I hold a MSC in Statistics from the University of São Paulo (USP) joint with Federal University of São Carlos (UFSCar). Recently, I have worked with random features approximation for interpretable kernel method and uncertainty quantification for regression (with conditional coverage guarantees). My research interests are high-dimensional statistics, optimization, and algorithms.
+I hold a MSC in Statistics from the University of São Paulo (USP) joint with Federal University of São Carlos (UFSCar). Recently, I have worked with random features approximation for interpretable kernel methods and uncertainty quantification for regression (with approximate conditional coverage guarantees). My research interests are high-dimensional statistics, optimization, and algorithms.
 <br>
 </p>
 Here is my [CV](/assets/pdf/CV.pdf){:target="_blank"}.
