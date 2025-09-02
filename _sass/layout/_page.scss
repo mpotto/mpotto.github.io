@@ -16,11 +16,19 @@
   }
 }
 
-.page {
+// Unify grid rules for all main content wrappers (single and archive pages)
+.page,
+.archive,
+.collection,
+.cv,
+.talk,
+.teaching,
+article.page,
+div.archive {
   @include breakpoint($large) {
-    @include span(10 of 12 last);
+    @include span(9.5 of 12 last);
     @include prefix(0.5 of 12);
-    @include suffix(2 of 12);
+    @include suffix(3 of 12);
   }
 
   .page__inner-wrap {
@@ -41,6 +49,20 @@
   & + .page__meta {
     margin-top: -0.5em;
   }
+}
+
+// Hide the page title on publications, talks, and teaching pages (by URL)
+body.page-publications .page__title,
+body.page-talks .page__title,
+body.page-teaching .page__title {
+  display: none !important;
+}
+
+// Remove top margin from first child when title is hidden
+body.page-publications .archive > *:first-child,
+body.page-talks .archive > *:first-child,
+body.page-teaching .archive > *:first-child {
+  margin-top: 0 !important;
 }
 
 .page__lead {

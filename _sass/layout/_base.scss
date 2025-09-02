@@ -8,9 +8,10 @@ html {
 }
 
 body {
+
   /* Set via _themes.scss */
   color: var(--global-text-color);
-  background-color: var(--global-bg-color);
+  background-color: var(--global-bg-color); /* revert to theme variable */
 
   margin: 0;
   padding: $masthead-height 0 0;
@@ -29,6 +30,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   font-family: $header-font-family;
   font-weight: bold;
+  color: #000 !important;
 }
 
 h1 {
@@ -115,6 +117,10 @@ blockquote {
 /* links */
 
 a {
+
+  color: #32006e;
+  text-decoration: none !important;
+
   &:focus {
     @extend %tab-focus;
   }
@@ -122,6 +128,8 @@ a {
   &:hover,
   &:active {
     outline: 0;
+    color: #32006e;
+    text-decoration: none !important;
   }
 }
 
@@ -169,7 +177,7 @@ hr {
   display: block;
   margin: 1em 0;
   border: 0;
-  border-top: 1px solid var(--global-border-color);
+  border-top: 1px solid #32006e;
 }
 
 /* lists */

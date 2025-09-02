@@ -1,9 +1,27 @@
+// Section headers for publications, talks, teaching
+.section-header {
+  font-weight: bold;
+  color: #32006e;
+  background: #f3eafd;
+  border-bottom: none;
+  padding: 0.25em 0.75em;
+  border-radius: 0.5em;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
 /* ==========================================================================
    ARCHIVE
    ========================================================================== */
 
 .archive {
   margin-bottom: 2em;
+
+  // Remove top margin from only the first child of .archive for talks and teaching pages
+  body.page-talks .archive > *:first-child,
+  body.page-teaching .archive > *:first-child {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
 
   @include breakpoint($medium) {
     @include span(12 of 12);
@@ -42,9 +60,16 @@
 .archive__item-title {
   margin-bottom: 0.25em;
   font-family: $sans-serif-narrow;
+  font-size: 1.1em;
+  color: #222;
+  font-weight: 400;
+  text-decoration: none !important;
+  transition: none;
 
-  a + a {
-    opacity: 0.5;
+  a, a:visited, a:active, a:hover {
+    color: #222 !important;
+    text-decoration: none !important;
+    transition: none;
   }
 }
 

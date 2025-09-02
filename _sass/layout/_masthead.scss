@@ -1,10 +1,14 @@
+.masthead__menu-item i, .masthead__menu-item svg {
+  background: transparent !important;
+  box-shadow: none !important;
+}
 /* ==========================================================================
    MASTHEAD
    ========================================================================== */
 
 .masthead {
   position: fixed;
-  background: var(--global-bg-color);
+  background: #fffefa !important; /* Nearly white, gentle yellow warmth */
   height: fit-content;
   top: 0;
   width: 100%;
@@ -19,8 +23,8 @@
     content: "";
     position: absolute;
     bottom: 0;
-    height: 1px;
-    background: var(--global-border-color);
+    height: 2px;
+    background: #32006e;
     width: 100%;
   }
 
@@ -45,23 +49,37 @@
 }
 
 .masthead__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   ul {
     margin: 0;
     padding: 0;
     clear: both;
     list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
 .masthead__menu-item {
-  background-color: var(--global-bg-color);
+  background-color: transparent;
   display: block;
   list-style-type: none;
   white-space: nowrap;
+  font-weight: bold;
+}
 
-  &--lg {
-    padding-right: 2em;
-    font-weight: 700;
-  }
+.masthead__menu-item a {
+  color: #000 !important;
+  font-family: Helvetica, Arial, sans-serif;
+  background: transparent !important;
+}
+
+.masthead__menu-item a:hover,
+.masthead__menu-item a:active,
+.masthead__menu-item a:visited {
+  background: transparent !important;
 }

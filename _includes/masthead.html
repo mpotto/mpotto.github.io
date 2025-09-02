@@ -4,9 +4,14 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
+  <!-- Drop-down (hamburger) menu button removed -->
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg persist"><a href="{{ base_path }}/">{{ site.title }}</a></li>
+          <!-- Home icon navigation link -->
+          <li class="masthead__menu-item">
+            <a href="{{ base_path }}/" title="Home" aria-label="Home">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home" style="vertical-align:middle;"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            </a>
+          </li>
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
@@ -15,11 +20,8 @@
             {% endif %}
             <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
           {% endfor %}
-          <li id="theme-toggle" class="masthead__menu-item persist tail">
-            <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
-          </li>
         </ul>
-        <ul class="hidden-links hidden"></ul>
+  <!-- Hidden links list removed -->
       </nav>
     </div>
   </div>
