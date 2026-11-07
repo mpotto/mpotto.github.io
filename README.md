@@ -1,7 +1,4 @@
-# mpotto.github.io
-
-Personal website of Mateus Piovezan Otto, served by GitHub Pages at
-<https://mpotto.github.io>.
+# Personal Website
 
 The site is a few hand-written HTML layouts, one stylesheet, and YAML data
 files. GitHub Pages builds it with Jekyll on every push to `master`; there is
