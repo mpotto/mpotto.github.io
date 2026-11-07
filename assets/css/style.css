@@ -1,0 +1,309 @@
+/* Typography after the CV, set entirely in its sans: Alegreya Sans for text,
+   headings, navigation and bylines, with small caps for section heads;
+   UW purple for links only; byline gray for secondary text; hairlines under
+   section heads. */
+
+:root {
+  --sans: "Alegreya Sans", "Gill Sans", "Segoe UI", Helvetica, Arial, sans-serif;
+  --sans-sc: "Alegreya Sans SC", "Alegreya Sans", "Gill Sans", Helvetica, Arial, sans-serif;
+
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --muted: #686b6f;          /* byline gray, one step darker for screen contrast */
+  --rule: #c9c9c6;
+  --box: #f0f0ed;            /* the only gray surface: the note under a paper */
+  --accent: #4b2e83;         /* UW purple */
+  --accent-hover: #35205e;
+  --underline: rgba(75, 46, 131, 0.35);
+  --selection: rgba(75, 46, 131, 0.18);
+
+  --measure: 52rem;
+  --gutter: 1.25rem;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #151417;
+    --text: #e7e5e9;
+    --muted: #9d9aa3;
+    --rule: #343239;
+    --box: #201f24;
+    --accent: #b9a6e0;
+    --accent-hover: #d0c2ec;
+    --underline: rgba(185, 166, 224, 0.4);
+    --selection: rgba(185, 166, 224, 0.25);
+    color-scheme: dark;
+  }
+}
+
+/* Base ------------------------------------------------------------------ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 1.125rem;
+  line-height: 1.5;
+  font-feature-settings: "lnum" 1, "kern" 1;
+  font-variant-numeric: lining-nums;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+@media (max-width: 40em) {
+  body { font-size: 1.0625rem; }
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  max-width: calc(var(--measure) + 2 * var(--gutter));
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+main { flex: 1; }
+
+::selection { background: var(--selection); }
+
+p { margin: 0 0 0.9em; }
+strong { font-weight: 700; }
+img { max-width: 100%; height: auto; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-hover); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.12em; }
+
+/* Links inside running text get a faint underline so they do not rely on colour alone. */
+.prose a {
+  text-decoration: underline;
+  text-decoration-color: var(--underline);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.12em;
+}
+.prose a:hover { text-decoration-color: currentColor; }
+
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.skip { position: absolute; left: -10000px; top: auto; }
+.skip:focus { left: var(--gutter); top: 0.5rem; z-index: 10; background: var(--bg); padding: 0.25rem 0.5rem; }
+
+/* Headings ---------------------------------------------------------------- */
+
+h1, h2, h3 { font-family: var(--sans); line-height: 1.2; margin: 0; }
+
+h1 { font-size: 1.75rem; font-weight: 700; letter-spacing: -0.005em; }
+
+/* Section heads as in the CV: bold small caps over a hairline. */
+h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  font-family: var(--sans-sc);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.01em;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.15rem;
+  margin: 2rem 0 0.8rem;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  margin: 1.25rem 0 0.5rem;
+}
+
+/* Group labels on the publications page: quiet small caps, no hairline. */
+h2.group {
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin: 1.75rem 0 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+}
+h2.group:first-child { margin-top: 0; }
+
+/* A small link sitting at the right end of a heading. */
+.aside {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+
+.page-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin: 2rem 0 0.25rem;
+}
+
+/* Masthead on the inner pages ------------------------------------------ */
+
+.masthead {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.25rem 1.5rem;
+  padding: 2rem 0 0.6rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.masthead + main { padding-top: 1.5rem; }
+
+.masthead-name { font-family: var(--sans); font-weight: 700; font-size: 1.35rem; color: var(--text); }
+.masthead-name:hover { color: var(--accent); text-decoration: none; }
+
+.nav {
+  display: flex;
+  gap: 1.25rem;
+  font-family: var(--sans-sc);
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+}
+.nav a:hover { text-decoration: none; }
+.nav a[aria-current="page"] { color: var(--text); }
+.nav-home { justify-content: flex-end; padding-top: 1.5rem; }
+
+/* Home page header: name, affiliation and links left, photo right -------- */
+
+.hero { padding-bottom: 0.5rem; }
+
+.hero-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 1.25rem;
+}
+
+.hero .name { margin-bottom: 0.45rem; }
+
+.byline {
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  line-height: 1.4;
+  color: var(--muted);
+  margin: 0 0 0.35rem;
+}
+
+.photo {
+  display: block;
+  flex: 0 0 auto;
+  width: 11rem;
+  aspect-ratio: 0.8;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+/* Profile links under the email, as in the contact block at the top of the CV. */
+.hero-links {
+  list-style: none;
+  margin: 0.1rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.hero-links li:not(:last-child)::after { content: "/"; color: var(--muted); margin-left: 0.5rem; }
+
+@media (max-width: 40em) {
+  .hero-row { flex-direction: column-reverse; align-items: flex-start; gap: 1.25rem; }
+  .photo { width: 8.5rem; }
+  .nav-home { padding-top: 1.25rem; }
+}
+
+/* Papers ------------------------------------------------------------------ */
+
+.papers { list-style: none; margin: 0; padding: 0; }
+.paper { margin: 0 0 1.2rem; }
+.paper-title { font-weight: 500; font-size: 1.05rem; }
+.paper-authors { font-size: 0.95rem; color: var(--muted); }
+.paper-authors .me { font-weight: 700; }
+.paper-venue { font-size: 0.95rem; color: var(--muted); }
+.paper-summary {
+  margin: 0.5rem 0 0;
+  padding: 0.5rem 0.75rem;
+  background: var(--box);
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+/* Bracketed link rows, [Paper] [Code] */
+.links { font-family: var(--sans); font-size: 0.95rem; }
+.links a { margin-right: 0.45rem; }
+.links a:last-child { margin-right: 0; }
+.links a::before { content: "["; color: var(--muted); }
+.links a::after { content: "]"; color: var(--muted); }
+.links a:hover { text-decoration: none; }
+.links a:hover::before, .links a:hover::after { color: var(--accent-hover); }
+
+/* Teaching entries, as in the CV: bold institution, indented rows with the
+   term right-aligned. ----------------------------------------------------- */
+
+.entry { margin: 0 0 0.85rem; }
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.row + .row { margin-top: 0.05rem; }
+.row .right {
+  flex: 0 0 auto;
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.sub { padding-left: 1em; font-size: 1rem; }
+
+@media (max-width: 40em) {
+  /* On phones a long left-hand text lets the date drop to its own line, still right-aligned. */
+  .row { flex-wrap: wrap; gap: 0 1rem; }
+  .row .right { margin-left: auto; }
+}
+
+/* Footer ------------------------------------------------------------------ */
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  margin-top: 2.5rem;
+  padding: 0.75rem 0 2rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.footer a { color: inherit; }
+
+/* Print ------------------------------------------------------------------- */
+
+@media print {
+  body { background: #fff; color: #000; font-size: 11pt; }
+  .page { max-width: none; padding: 0; min-height: 0; }
+  .nav, .skip, .footer, .hero-links { display: none; }
+  a { color: #4b2e83; text-decoration: none; }
+  .paper-venue { color: #000; }
+  .paper-summary { background: #f0f0f0; }
+}

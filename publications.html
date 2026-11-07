@@ -1,0 +1,13 @@
+---
+layout: page
+title: Publications
+permalink: /publications/
+description: Papers, working papers, and theses by Mateus Piovezan Otto.
+hide_title: true
+redirect_from:
+  - /publications.html
+---
+{% assign pubs = site.data.publications | sort: "year" | reverse %}
+{% include paper-group.html pubs=pubs type="working" title="Working papers" %}
+{% include paper-group.html pubs=pubs type="journal" title="Journal articles" %}
+{% include paper-group.html pubs=pubs type="thesis" title="Theses" %}

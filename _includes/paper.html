@@ -1,0 +1,18 @@
+{%- assign p = include.p -%}
+<li class="paper">
+  <div class="paper-title">{{ p.title }}</div>
+  <div class="paper-authors">
+    {%- for a in p.authors -%}
+      {%- if a == site.author.name %}<span class="me">{{ a }}</span>{% else %}{{ a }}{% endif -%}
+      {%- unless forloop.last %}, {% endunless -%}
+    {%- endfor -%}
+  </div>
+  <div class="paper-venue">
+    {%- if p.type == "thesis" %}{{ p.venue }}{% else %}<em>{{ p.venue }}</em>{% endif -%}
+    {%- if p.detail %} {{ p.detail }}{% endif -%}
+    {%- if p.year %} ({{ p.year }}){% endif -%}
+    {%- if p.status %}. {{ p.status }}{% endif -%}.
+  </div>
+  {% if p.links %}{% include links.html links=p.links %}{% endif %}
+  {% if include.summary and p.summary %}<p class="paper-summary">{{ p.summary }}</p>{% endif %}
+</li>

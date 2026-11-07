@@ -1,0 +1,38 @@
+---
+layout: default
+---
+<header class="hero">
+  {% include nav.html class="nav-home" %}
+  <div class="hero-row">
+    <div class="hero-text">
+      <h1 class="name">{{ site.author.name }}</h1>
+      <p class="byline">{{ site.author.role }}<br>{{ site.author.affiliation }}</p>
+      {% if site.author.email %}<p class="byline"><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>{% endif %}
+      {% if site.author.links %}
+      <ul class="hero-links">
+        {% for l in site.author.links -%}
+        <li><a href="{% if l.url contains '://' or l.url contains 'mailto:' %}{{ l.url }}{% else %}{{ l.url | relative_url }}{% endif %}">{{ l.label }}</a></li>
+        {% endfor -%}
+      </ul>
+      {% endif %}
+    </div>
+    <img class="photo" src="{{ site.author.photo | relative_url }}" alt="{{ site.author.name }}" width="880" height="1100">
+  </div>
+</header>
+
+<main id="content">
+  <section id="about" class="prose">
+    <h2>About me</h2>
+    {{ content }}
+  </section>
+
+  {% assign highlighted = site.data.publications | where: "highlight", true %}
+  {% if highlighted.size > 0 %}
+  <section id="papers">
+    <h2>Highlighted papers <a class="aside" href="{{ '/publications/' | relative_url }}">All papers</a></h2>
+    <ol class="papers">
+      {% for p in highlighted %}{% include paper.html p=p summary=true %}{% endfor %}
+    </ol>
+  </section>
+  {% endif %}
+</main>

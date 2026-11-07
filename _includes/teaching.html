@@ -1,0 +1,9 @@
+{% for t in site.data.teaching -%}
+<div class="entry">
+  <div class="row"><strong>{{ t.institution }}</strong></div>
+  {% if t.role %}<div class="sub"><em>{{ t.role }}</em></div>{% endif %}
+  {% for c in t.courses -%}
+  <div class="row sub"><span>{{ c.title }}{% if c.code %} ({{ c.code }}){% endif %}</span><span class="right">{{ c.term }}</span></div>
+  {% endfor -%}
+</div>
+{% endfor -%}

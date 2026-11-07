@@ -1,271 +1,61 @@
-# Welcome to Jekyll!
-#
+# Site -----------------------------------------------------------------------
+title: Mateus Piovezan Otto
+tagline: PhD student in Statistics at the University of Washington
+description: >-
+  Mateus Piovezan Otto is a PhD student in the Department of Statistics at the
+  University of Washington, working on nonparametric and semiparametric
+  statistical methods for public health data.
+url: "https://mpotto.github.io"
+baseurl: ""
+lang: en
+timezone: America/Los_Angeles
 
-# Basic Site Settings
-locale                   : "en-US"
-site_theme               : "default" # Currently available options are "default", "air"
-title                    : "Mateus Piovezan Otto"
-title_separator          : "-"
-name                     : &name "Mateus Piovezan Otto"
-description              : &description "PhD Student, Department of Statistics, University of Washington."
-url                      : https://mpotto.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "mpotto/mpotto.github.io"
-
-# Site Author - The following control what appear as part of the author content on the side bar.
-#               If a field is blank the icon and link will not appear, otherwise it will be shown.
-#               Additional customization can be done by editing /_includes/author-profile.html
+# Who the site is about. The layouts read these fields. ----------------------
 author:
-  # Biographic information
-  avatar           : "profile.png"
-  name             : "Mateus Piovezan Otto"
-  pronouns         : # example: "she/her"  
-  bio              : "PhD Student\nDepartment of Statistics"
-  location         : "Seattle, WA"
-  employer         : "University of Washington"
-  uri              : # URL
-  # email            : "mpotto@uw.edu" 
+  name: Mateus Piovezan Otto
+  role: PhD student, Department of Statistics
+  affiliation: University of Washington
+  email: mpotto@uw.edu
+  photo: /images/profile.jpg
+  # Links shown under the email on the home page, in this order.
+  links:
+    - label: Google Scholar
+      url: https://scholar.google.com/citations?user=cy8jBFEAAAAJ
+    - label: arXiv
+      url: https://arxiv.org/a/piovezanotto_m_1.html
+    - label: GitHub
+      url: https://github.com/mpotto
 
-  # Academic websites
-  arxiv            : "https://arxiv.org/a/piovezanotto_m_1.html"
-  googlescholar    : "https://scholar.google.com/citations?user=cy8jBFEAAAAJ&hl=en"
+# Profile links for the JSON-LD block that jekyll-seo-tag emits. --------------
+social:
+  name: Mateus Piovezan Otto
+  links:
+    - https://scholar.google.com/citations?user=cy8jBFEAAAAJ
+    - https://arxiv.org/a/piovezanotto_m_1.html
+    - https://github.com/mpotto
+    - https://orcid.org/0000-0003-1855-9606
 
-  # Repositories and software development  
-  github           : "mpotto"
-
-# Publication Category - The following the list of publication categories and their headings
-publication_category:
-  conferences:
-    title: 'Conferences'
-  journals:
-    title: 'Journals'    
-  preprints:
-    title: 'Preprints'
-  
-# Site Settings
-teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
-breadcrumbs              : false # true, false (default)
-words_per_minute         : 160
-future                   : true
-read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
-talkmap_link             : false      #change to true to add link to talkmap on talks page
-staticman:
-  allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : "gh-pages" # "master", "gh-pages"
-  commitMessage          : "New comment."
-  filename               : comment-{@timestamp}
-  format                 : "yml"
-  moderation             : true
-  path                   : "_data/comments/{options.slug}"
-  requiredFields         : ['name', 'email', 'message']
-  transforms:
-    email                : "md5"
-  generatedFields:
-    date:
-      type               : "date"
-      options:
-        format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
-atom_feed:
-  hide                   : false     # change to true to hide the RSS feed in the footer
-  path                   : # blank (default) uses feed.xml
-
-
-# Reading Files
-include:
-  - .htaccess
-  - _pages
-  - files
-exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - .asset-cache
-  - .bundle
-  - .github
-  - .jekyll-assets-cache
-  - .sass-cache
-  - assets/js/_main.js
-  - assets/js/plugins
-  - assets/js/vendor
-  - CHANGELOG
-  - Capfile
-  - config
-  - Dockerfile
-  - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
-  - LICENSE
-  - local
-  - log
-  - node_modules
-  - package.json*
-  - Rakefile
-  - README
-  - tmp
-  - vendor
-keep_files:
-  - .git
-  - .svn
-encoding: "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-
-
-# Conversion
+# Build ----------------------------------------------------------------------
 markdown: kramdown
-highlighter: rouge
-lsi: false
-excerpt_separator: "\n\n"
-incremental: false
-
-
-# Markdown Processing
 kramdown:
   input: GFM
-  hard_wrap: false
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
-
-
-# These settings control the types of collections used by the template
-collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
-  publications:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
-    output: true
-    permalink: /:collection/:path/
-
-
-# These settings control how pages and collections are included in the site
-defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-  # _pages
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-      author_profile: true
-  # _teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: false
-      share: true
-      comments: true
-  # _publications
-  - scope:
-      path: ""
-      type: publications
-    values:
-      layout: single
-      author_profile: false
-      share: true
-      comments: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: false
-      share: true
-      comment: true
-  # _talks
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
-      author_profile: false
-      share: true
-
-
-# Sass/SCSS
-sass:
-  sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
-
-
-# Outputting
-permalink: /:categories/:title/
-# paginate: 5 # amount of posts to show
-# paginate_path: /page:num/
-timezone: Etc/UTC # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
-
-# Plugins
+permalink: pretty
 plugins:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
+  - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-redirect-from
-  - jemoji
-
-# Mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-redirect-from
-  - jemoji
-
-
-# Archives
-#  Type
-#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
-#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
-#  Path (examples)
-#  - Archive page should exist at path when using Liquid method or you can
-#    expect broken links (especially with breadcrumbs enabled)
-#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
-#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
-#  - <base_path/my-awesome-category/index.html ~> path: /
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
-# https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
-
-
-# HTML Compression
-# - http://jch.penibelst.de/
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page

@@ -1,0 +1,7 @@
+{%- assign group = include.pubs | where: "type", include.type -%}
+{%- if group.size > 0 %}
+<h2 class="group">{{ include.title }}</h2>
+<ol class="papers">
+  {% for p in group %}{% include paper.html p=p %}{% endfor %}
+</ol>
+{%- endif %}

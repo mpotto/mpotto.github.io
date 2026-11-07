@@ -1,0 +1,67 @@
+# One entry per paper. The home page shows the entries with `highlight: true`
+# in the order of this file; the publications page groups all entries by
+# type and sorts them by year.
+#
+# Fields: title, authors (your own name is emphasised automatically),
+# venue, detail (volume, issue, article number), year,
+# type (working | journal | thesis), status (optional, e.g. "Under review"),
+# links (label + url), summary (one sentence, shown in a box on the home page).
+
+- title: "RFFNet: Large-scale interpretable kernel methods via random Fourier features"
+  authors: [Mateus Piovezan Otto, Rafael Izbicki]
+  venue: Computational Statistics
+  detail: "41(7), 144"
+  year: 2026
+  type: journal
+  links:
+    - { label: Paper, url: "https://doi.org/10.1007/s00180-026-01810-x" }
+    - { label: arXiv, url: "https://arxiv.org/abs/2211.06410" }
+    - { label: Code, url: "https://github.com/mpotto/rffnet" }
+  summary: >-
+    A scalable kernel method that learns which features matter while it
+    trains, built on random Fourier features for Automatic Relevance Determination kernels.
+  highlight: true
+
+# - title: "Supervised Stochastic Gradient Algorithms for Multi-Trial Source Separation"
+#   authors: [Ronak Mehta, Mateus Piovezan Otto, Noah Stanis, Azadeh Yazdan-Shahmorad, Zaid Harchaoui]
+#   venue: arXiv preprint
+#   year: 2025
+#   type: working
+#   status: Under review
+#   links:
+#     - { label: arXiv, url: "https://arxiv.org/abs/2508.20618" }
+#     - { label: Code, url: "https://github.com/ronakdm/multiica" }
+#   summary: >-
+#     A stochastic ICA algorithm that uses trial labels as supervision, which
+#     makes the non-convex optimization more reliable and the recovered
+#     components more interpretable.
+#   highlight: true
+
+- title: "Regression trees for fast and adaptive prediction intervals"
+  authors: [Luben M. C. Cabezas, Mateus Piovezan Otto, Rafael Izbicki, Rafael B. Stern]
+  venue: Information Sciences
+  detail: "686, 121369"
+  year: 2025
+  type: journal
+  links:
+    - { label: Paper, url: "https://doi.org/10.1016/j.ins.2024.121369" }
+    - { label: arXiv, url: "https://arxiv.org/abs/2402.07357" }
+    - { label: Code, url: "https://github.com/monoxido45/clover" }
+  summary: >-
+    Regression trees fit to conformity scores give prediction intervals with
+    local coverage guarantees at a fraction of the cost of existing methods.
+  highlight: true
+
+- title: "Scalable and interpretable kernel methods based on random Fourier features"
+  authors: [Mateus Piovezan Otto]
+  venue: "Master's thesis, University of São Paulo"
+  year: 2022
+  type: thesis
+  links:
+    - { label: Thesis, url: "https://www.teses.usp.br/teses/disponiveis/104/104131/tde-02052023-084042/pt-br.php" }
+
+- title: "Searching for dark matter in the Galactic Center with the Fermi Gamma-ray Space Telescope"
+  authors: [Mateus Piovezan Otto, Aion da Escóssia Melo Viana]
+  venue: "Senior thesis, São Carlos Institute of Physics, University of São Paulo"
+  year: 2020
+  type: thesis

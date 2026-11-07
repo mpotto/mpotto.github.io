@@ -1,0 +1,5 @@
+<nav class="nav{% if include.class %} {{ include.class }}{% endif %}" aria-label="Site">
+  {% for item in site.data.navigation -%}
+  <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+  {% endfor -%}
+</nav>

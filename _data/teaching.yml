@@ -1,0 +1,7 @@
+# Teaching, grouped by institution. Shown on the home page and the CV.
+- institution: University of Washington
+  role: Teaching Assistant, Graduate Courses
+  courses:
+    - { title: Advanced Methods of Statistical Inference I, code: "STAT 581/BIOST 583", term: Fall 2026 }
+    - { title: Statistical Machine Learning for Data Scientists, code: "DATA/STAT/BIOST 558", term: Spring 2026 }
+    - { title: Introduction to Statistics and Probability, code: "DATA/STAT/BIOST 556", term: Fall 2024 }
